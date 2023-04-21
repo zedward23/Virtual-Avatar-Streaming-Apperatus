@@ -17,7 +17,8 @@ Virtual-Avatar-Streaming-Apperatus (VASA)
 - Basic Mouth Tracking
 - Up to 4 expressions
 - Basic Parallax
-- Chroma-Key and Stream Compatibility 
+- Chroma-Key and Stream Compatibility
+ 
 ![](ExpressionDemo.gif) ![](mouthDemo.gif)
 
 ## How to Run (Recommended Method)
