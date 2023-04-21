@@ -34,6 +34,7 @@ $pip install dlib
 ```
 Once the libraries are installed, open `smolAme2.0.py` and run the script. 
 A setup window will pop up like the one below:
+
 ![](setup.png)
 
 To quick start, click `Proceed` and a basic streaming window with a Smol Ame avatar with a green screen chroma key background will begin. 
