@@ -63,6 +63,8 @@ To properly map each of the facial expressions to their keybinds, we also need t
 
 Refer to the `smolAme`folder and `Ame_Setup.txt` for reference.
 
+Press esc to quit the program.
+
 ## Streaming
 
 I recommend using [StreamLabs](https://streamlabs.com/) as your YouTube/Twitch Encoder for streaming. Please refer to the following resources to get that set up for streaming:
