@@ -12,6 +12,13 @@ Virtual-Avatar-Streaming-Apperatus (VASA)
 
 ![](thumbnail.png)
 
+## Features
+- Blinking
+- Basic Mouth Tracking
+- Up to 4 expressions
+- Basic Parallax
+- Chroma-Key and Stream Compatibility 
+
 ## How to Run (Recommended Method)
 
 Open folder in VS Code and pip install the following in a new Terminal:
