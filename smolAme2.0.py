@@ -94,7 +94,8 @@ def setDefault():
 
 #Setup Page
 root = tk.Tk()
-root.geometry('100x400')
+root.geometry('300x120')
+root.title('Setup')
 btn = tk.Button(root, text='Use Default Setup', command=setDefault)
 btn.pack(side = 'top') 
 btn1 = tk.Button(root, text='Select Background', command=setBG)
@@ -127,20 +128,12 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 width = int(cap.get(3))
 height = int(cap.get(4))
 
-#bg = np.zeros((height, width, 4), dtype=np.uint8)
-#bg[:,:,0] = np.ones((height, width), dtype=np.uint8)*255.0
-#cv2.imwrite('background.jpg', bg)
-bg = cv2.imread('background.jpg', cv2.IMREAD_UNCHANGED)
-
 #background images
 bg = backgroundImage
 bg = cv2.cvtColor(bg, cv2.COLOR_BGR2RGBA)
 
 emptyCanvas = genEmpties(bg)
 h,w,_ = emptyCanvas.shape
-
-
-
 
 emptyHead = genEmpties(head)
 fullhead = padToFit(25,25, emptyHead.copy(), neutral)
@@ -332,10 +325,10 @@ while cap.isOpened():
         lowerLip = lowerLip - lowerLip[0] + position[0]
 
         #display avatar
-        avatar = overlayPng(backgroundImage, avatar)
+        avatar = overlayPng(bg, avatar)
         avatar = cv2.polylines(avatar, np.int32([upperLip]), False, (0, 0, 0), 4)
         avatar = cv2.polylines(avatar, np.int32([lowerLip]), False, (0, 0, 0), 4)
-        cv2.imshow('Avatar', avatar)
+        cv2.imshow('VASA', avatar)
 
         #expression toggle
         keyPress = cv2.waitKey(1) & 0xFF
@@ -356,10 +349,10 @@ while cap.isOpened():
             print("4 pressed")
     except:    
         #display avatar
-        avatar = overlayPng(backgroundImage, defaultFace)
+        avatar = overlayPng(bg, defaultFace)
         avatar = cv2.polylines(avatar, np.int32([upperLip]), False, (0, 0, 0), 4)
         avatar = cv2.polylines(avatar, np.int32([lowerLip]), False, (0, 0, 0), 4)
-        cv2.imshow('Virtual Avatar Streaming Apperatus', avatar)
+        cv2.imshow('VASA', avatar)
     
 cap.release()
 
