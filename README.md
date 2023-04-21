@@ -18,6 +18,7 @@ Virtual-Avatar-Streaming-Apperatus (VASA)
 - Up to 4 expressions
 - Basic Parallax
 - Chroma-Key and Stream Compatibility 
+![](ExpressionDemo.gif) ![](mouthDemo.gif)
 
 ## How to Run (Recommended Method)
 
