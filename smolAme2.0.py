@@ -23,11 +23,11 @@ def genEmpties(bg):
 def padToFit(x, y, empty, fg):
     height , length, _ = fg.shape
 
-    for i in range(length):
-        for j in range(height):
-            for k in range(0,3):
-                empty[y+j, x+i, k] = fg[j,i,k]
-            empty[y+j, x+i, 3] = abs(255-fg[j,i,3])
+    x_coords, y_coords = np.meshgrid(range(length), range(height))
+
+    empty[y + y_coords, x + x_coords, :3] = fg[y_coords, x_coords, :3]
+    empty[y + y_coords, x + x_coords, 3] = abs(255 - fg[y_coords, x_coords, 3])
+
     return empty
 
 def overlayPng(bg, fg):
@@ -356,3 +356,5 @@ while cap.isOpened():
     
 cap.release()
 
+
+            
